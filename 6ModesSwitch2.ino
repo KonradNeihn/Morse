@@ -113,25 +113,8 @@ void setup() {
   // maximaler energiesparmodus, um auch mit 500mA USB auszukommen
 
   if (digitalRead(NO_PRINTER_MODE_PIN) != LOW){  // nur wenn der drehschalter nicht auf NO_PRINTING steht
-    printer.println("Es begab sich zu einer Zeit (00:13), als Charlotte sich schon ins Bett einmummelte, während Konrad noch das Rätsel für den nächsten Tag in die Tasten hämmerte.");
-    printer.println("Sie räkelte sich auf den Bauch und zog die Decke bis unter ihre Nase.");
-    printer.println("Ihre Gedanken wanderten in die Uni. Im letzten Tutorium saß so ein zwielichtig aussehender Typ. Was das wohl für einer war...");
-    printer.println("Im Nachhinein hätte sie ihn gerne einfach mal angesprochen. Sie hätte so etwas sagen können, wie: \"Hey na? Brauchst du Hilfe?\".");
-    printer.println("Das wäre kein dummer Anfang gewesen, denn schließlich war sie hier ja die Tutorin.");
-    printer.println("Er hätte so etwas sagen können, wie: \"In meiner HOSE! HAHAHAHA\"");
-    printer.println("Nein, er wäre bestimmt ganz süß gewesen und er hätte sie etwas gefragt, was sie hätte beantworten können.");
-    printer.println("Er hätte ein Problem gehabt, was sie hätte lösen können... Oh ja! Dabei wären sie sich näher gekommen.");
-    printer.println("Wie aus Versehen hätten sich ihre Beine unter dem Tisch berührt und sie hätten gleichzeiting zur Tastatur gegriffen und ihre Hände wären aufeinander liegen geblieben.");
-    printer.println("Sie hätten sich in die Augen gesehen. Er hätte gelächelt. Da wäre es um sie geschehen gewesen. Sie mussten es jetzt sofort tun!");
-    printer.println("Doch ihr Equipment lag noch bei Konrad und ohne ginge natürlich nicht. Schnell packten sie ihre Sachen zusammen und er eilte ihr durch die Stadt hinterher.");
-    printer.println("Zum Glück hatte sie sich gemerkt, wo die Ersatzschlüssel zu Konrads Wohnung versteckt waren.");
-    printer.println("\"Sorry mein Zimmer ist ein bisschen unaufgeräumt.\" hätte sie sagen müssen, denn Konrads Boden war wieder voller leerer Chipsdosen.");
-    printer.println("Er hätte seinen Blick durchs Zimmer schweifen lassen: \"Du bist Pink Floyd und Doors Fan? Guter Geschmack!\"");
-    printer.println("Sie lächelte und lotste ihn mit dem Zeigefinger zu sich heran. Zusammen stiegen sie über das Sofa ins Bett. Sie konnte es kaum erwarten! Zu lange wart es her...");
-    printer.println("Sie guckten sich tief in die Augen und langsam, ganz langsam öffnete sie das Boggel.");
-    printer.println("\"Auf eine gute Runde!\"");
-  }
     //printer.println("(debug) esp booted");
+  }
 
   printQueue = xQueueCreate(96, sizeof(char)); // 96 sind zwei zeilen des druckers
   udpSendQueue = xQueueCreate(32, sizeof(UdpPacket));
